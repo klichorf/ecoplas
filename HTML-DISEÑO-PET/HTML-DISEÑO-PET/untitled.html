@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>proyecto mascota feliz</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:400,700&amp;display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Kaushan+Script&amp;display=swap">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/css/Clients-UI.css">
+    <link rel="stylesheet" href="assets/css/Contact-form-simple.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-v2-Modal--Full-with-Google-Map.css">
+    <link rel="stylesheet" href="assets/css/Data-Table-styles.css">
+    <link rel="stylesheet" href="assets/css/Data-Table.css">
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.10.15/css/dataTables.bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/Login-Box-En-login-box-en.css">
+    <link rel="stylesheet" href="assets/css/Ludens-Users---2-Simple-Registration-Section.css">
+    <link rel="stylesheet" href="assets/css/Register-form.css">
+    <link rel="stylesheet" href="assets/css/Registration-Form-with-Photo.css">
+    <link rel="stylesheet" href="assets/css/Table-With-Search-search-table.css">
+    <link rel="stylesheet" href="assets/css/Table-With-Search.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body>
+    <div class="row">
+        <div class="col-10 col-sm-10 col-md-10 offset-1 offset-sm-1 offset-md-1 text-start align-content-md-center">
+            <form method="post">
+                <h2 class="text-center" style="margin-bottom: 20px;color: #38414b;">Crear Usuario</h2>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;color: #505E6C;"><strong>Nombre</strong></label><input class="form-control" type="text" style="margin-bottom: 20px;" placeholder="Nombre Completo"></div>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>Usuario</strong></label><input class="form-control" type="text" style="margin-bottom: 20px;" placeholder="Nombre de usuario"></div>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>correo electronico</strong><br></label><input class="form-control" type="text" style="margin-bottom: 20px;" placeholder="@hotmail.com"></div><script>
+    // Submit button made with javascript
+    function changePassword() {
+        var password = document.querySelector("#password").value;
+        var confirmPassword = document.querySelector("#confirmPassword").value;
+        
+        if(password.length >= 8) {
+            if(password === confirmPassword)
+            {
+                var btn = $('#submitButton').removeAttr("disabled");
+                document.querySelector('#passwordsError').style.display = 'none';
+                console.log("enabling")
+            }
+            else {
+                var btn = $('#submitButton').attr("disabled", "true");
+                document.querySelector('#passwordsError').style.display = 'block';
+                document.querySelector('#errorMessage').innerHTML = 'The passwords do not match';
+                console.log("disabling")
+            }
+        }
+        else {
+            var btn = $('#submitButton').attr("disabled", "true");
+            document.querySelector('#passwordsError').style.display = 'block';
+            document.querySelector('#errorMessage').innerHTML = 'The new password must be at least 8 characters long';
+            console.log("disabling")
+        }
+    }
+</script>
+
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>Contraseña</strong></label><input class="form-control" type="password" id="password" placeholder="***********" style="margin-bottom: 20px;" onchange="changePassword();"></div>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>Confirmar Contraseña</strong></label><input class="form-control" type="password" id="confirmPassword" placeholder="***********" style="margin-bottom: 20px;" onchange="changePassword();"></div>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>Telefono</strong><br></label><input class="form-control" type="password" id="confirmPassword-1" style="margin-bottom: 20px;" onchange="changePassword();"></div>
+                <div class="form-group mb-3"><label class="form-label" style="margin-bottom: 10px;margin-top: 10px;color: #505E6C;"><strong>Rol</strong><br></label></div><select class="form-select">
+                    <option value="12" selected="">Administrador</option>
+                    <option value="13">Usuario</option>
+                    <option value="14">Asesor</option>
+                </select>
+                <div id="passwordsError" class="form-group mb-3" style="display: none;margin-bottom: 18px;"><span id="errorMessage" class="text-danger" style="font-size:15px;">Text</span></div>
+                <div class="row">
+                    <div class="col-md-6" style="margin-top: 20px;"><button class="btn btn-secondary d-block d-lg-flex justify-content-lg-center w-100" type="reset">Cancelar</button></div>
+                    <div class="col-md-6" style="margin-top: 20px;"><a class="btn btn-primary d-block d-lg-flex justify-content-lg-center w-100" role="button" id="submitButton" data-bs-target="#guardarregistro" href="index.html">Guardar</a></div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"><span class="copyright">Copyright&nbsp;© Brand 2022</span></div>
+                <div class="col-md-4">
+                    <ul class="list-inline social-buttons">
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li class="list-inline-item"><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <ul class="list-inline quicklinks">
+                        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+                        <li class="list-inline-item"><a href="#">Terms of Use</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.10.15/js/dataTables.bootstrap.min.js"></script>
+    <script src="assets/js/agency.js"></script>
+    <script src="assets/js/Contact-Form-v2-Modal--Full-with-Google-Map.js"></script>
+    <script src="assets/js/Table-With-Search.js"></script>
+</body>
+
+</html>
